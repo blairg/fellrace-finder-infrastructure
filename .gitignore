@@ -1,0 +1,10 @@
+yarn-error.log
+gcsauth.json
+tfplan
+.terraform
+errored.tfstate
+variables.tfvars
+*.pem
+*.key
+*.crt
+*cluster-kubeconfig.yaml

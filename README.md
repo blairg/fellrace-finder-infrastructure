@@ -1,0 +1,1 @@
+terraform init -backend-config="access_key=XXXXXXXX" -backend-config="secret_key=XXXXXX" && terraform plan -var-file=variables.tfvars -out=tfplan -input=false && terraform apply "tfplan"
