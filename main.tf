@@ -6,7 +6,7 @@ provider "digitalocean" {
 
 terraform {
   backend "s3" {
-    bucket = "fellrace-finder-infrastructure"
+    bucket = "fellrace-finder-infrastructure-1"
     key    = "terraform.state"
     region = "us-east-1"
     endpoint = "ams3.digitaloceanspaces.com"
@@ -20,6 +20,12 @@ terraform {
 # Create a Digital Ocean Kubernetes Cluster
 module "cluster" {
   source = "./cluster"
+}
+
+module "load-balancer" {
+  source = "./load-balancer"
+
+  cluster_node_ip = "${module.cluster.cluster_node_ip}"
 }
 
 module "helm" {

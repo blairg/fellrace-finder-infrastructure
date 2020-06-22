@@ -22,3 +22,8 @@ output "cluster_config" {
 	description = "Kube Config of the newly created Kubernetes cluster"
 	value = "${digitalocean_kubernetes_cluster.bgtest-cluster.kube_config.0.raw_config}" 
 }
+
+output "cluster_node_ip" {
+	description = "Node IP of the node in the cluster"
+	value = "${digitalocean_kubernetes_cluster.bgtest-cluster.node_pool.0.nodes.0.droplet_id}" 
+}
