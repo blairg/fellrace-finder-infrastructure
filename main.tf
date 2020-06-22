@@ -22,6 +22,12 @@ module "cluster" {
   source = "./cluster"
 }
 
+module "load-balancer" {
+  source = "./load-balancer"
+
+  cluster_node_ip = "${module.cluster.cluster_node_ip}"
+}
+
 module "helm" {
   source = "./helm"
 
