@@ -6,7 +6,7 @@ provider "digitalocean" {
 
 terraform {
   backend "s3" {
-    bucket = "fellrace-finder-infrastructure"
+    bucket = "fellrace-finder-infrastructure-2"
     key    = "terraform.state"
     region = "us-east-1"
     endpoint = "ams3.digitaloceanspaces.com"
