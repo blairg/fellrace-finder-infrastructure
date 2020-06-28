@@ -21,19 +21,3 @@ terraform {
 module "cluster" {
   source = "./cluster"
 }
-
-module "load-balancer" {
-  source = "./load-balancer"
-
-  cluster_node_ip = "${module.cluster.cluster_node_ip}"
-}
-
-module "helm" {
-  source = "./helm"
-
-  cluster_host = "${module.cluster.cluster_host}"
-  cluster_client_certificate = "${module.cluster.cluster_client_certificate}"
-  cluster_client_key = "${module.cluster.cluster_client_key}"
-  cluster_ca_certificate = "${module.cluster.cluster_ca_certificate}"
-  cluster_config = "${module.cluster.cluster_config}"
-}

@@ -1,1 +1,14 @@
-terraform init -backend-config="access_key=XXXXXXXX" -backend-config="secret_key=XXXXXX" && terraform plan -var-file=variables.tfvars -out=tfplan -input=false && terraform apply "tfplan"
+![](https://github.com/actions/blairg/fellrace-finder-infrastructure/workflows/CI/badge.svg)
+
+# Create Cluster
+
+## Set Env Vars
+ First export the following env vars (DO_TOKEN, DO_ACCESS_KEY, DO_SECRET_KEY). As per below
+ ```
+ export DO_TOKEN="<VALUE>" && export DO_ACCESS_KEY="<VALUE>" && export DO_SECRET_KEY="<VALUE>"
+ ```
+
+## Create Cluster
+```
+make
+```

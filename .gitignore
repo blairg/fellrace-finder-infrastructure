@@ -8,3 +8,6 @@ variables.tfvars
 *.key
 *.crt
 *cluster-kubeconfig.yaml
+cluster_config
+.env
+get_helm.sh

@@ -1,3 +1,8 @@
+output "cluster_id" {
+	description = "Cluster ID of the newly created Kubernetes cluster"
+	value = "${digitalocean_kubernetes_cluster.bgtest-cluster.id}" 
+}
+
 output "cluster_host" {
 	description = "Endpoint of the newly created Kubernetes cluster"
 	value = "${digitalocean_kubernetes_cluster.bgtest-cluster.endpoint}" 
