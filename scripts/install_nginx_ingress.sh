@@ -1,6 +1,6 @@
 set -e
 
-export KUBECONFIG="$(pwd)/cluster_config"
+KUBECONFIG="$(pwd)/cluster_config"
 
 helm repo add nginx-stable https://helm.nginx.com/stable
 helm repo update
