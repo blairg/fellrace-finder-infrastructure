@@ -29,3 +29,8 @@ jobs:
     # Create Kubernetes Cluster
     - name: Create Cluster
       run: make
+      env: 
+        DO_TOKEN: ${{ secrets.DO_TOKEN }}
+        DO_ACCESS_KEY: ${{ secrets.DO_ACCESS_KEY }}
+        DO_SECRET_KEY: ${{ secrets.DO_SECRET_KEY }}
+  
