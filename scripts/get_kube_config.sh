@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-export CLUSTER_ID=$(terraform output cluster_id) && \
+export CLUSTER_ID="$(terraform output cluster_id)" && \
 echo "Setting cluster-id:${CLUSTER_ID}" && \
 curl -X GET \
     -H "Content-Type: application/json" \
