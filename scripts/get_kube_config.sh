@@ -9,6 +9,6 @@ set -e
 #     "https://api.digitalocean.com/v2/kubernetes/clusters/${CLUSTER_ID}/kubeconfig" \
 # > cluster_config
 
-snap install doctl
+sudo snap install doctl
 doctl auth init -t $DO_TOKEN
 doctl kubernetes cluster kubeconfig show bgtest-cluster | tee cluster_config
