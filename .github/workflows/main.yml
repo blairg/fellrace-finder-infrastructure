@@ -31,7 +31,7 @@ jobs:
       run: | 
           sudo mkdir -p /home/runner/.kube
           export KUBECONFIG="/home/runner/work/fellrace-finder-infrastructure/cluster_config"
-          make create_cluster
+          make create_cluster get_kube_config
       env: 
         DO_TOKEN: ${{ secrets.DO_TOKEN }}
         DO_ACCESS_KEY: ${{ secrets.DO_ACCESS_KEY }}
@@ -39,7 +39,7 @@ jobs:
     
     # Install Helm
     - name: Install Helm
-      run: make get_kube_config install_helm
+      run: make install_helm
 
     # Install NGINX
     - name: Install NGINX Ingress
