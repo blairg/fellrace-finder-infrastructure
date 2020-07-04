@@ -12,7 +12,8 @@ client = session.client('s3',
                         aws_access_key_id=access_key,
                         aws_secret_access_key=secret_key)
 
-# Download file
-client.download_file('fellrace-finder-infrastructure-2',
-                     'cluster.properties',
-                     'cluster.properties')
+# Upload file
+client.put_object(Bucket='fellrace-finder-infrastructure-2',
+                  Key='cluster.properties',
+                  Body=b'0',
+                  ACL='private')
