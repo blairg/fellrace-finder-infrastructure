@@ -31,7 +31,7 @@ jobs:
       run: | 
           sudo mkdir -p /home/runner/.kube
           export KUBECONFIG="/home/runner/fellrace-finder-infrastructure/cluster_config"
-          make get_kube_config
+          make
       env: 
         DO_TOKEN: ${{ secrets.DO_TOKEN }}
         DO_ACCESS_KEY: ${{ secrets.DO_ACCESS_KEY }}
