@@ -31,6 +31,8 @@ jobs:
       run: | 
           sudo mkdir -p /home/runner/.kube
           sudo chmod -R 777 /home/runner/.kube
+          touch /home/runner/.kube/config
+          export KUBECONFIG="/home/runner/.kube/config"
           make
       env: 
         DO_TOKEN: ${{ secrets.DO_TOKEN }}
