@@ -12,7 +12,7 @@ get_kube_config:
 
 destroy_cluster: 
 	@echo "Destroying cluster"
-	sh ./scripts/destroy_cluster.sh
+	bash ./scripts/destroy_cluster.sh
 	@echo "Destroyed cluster"
 
 install_helm: 
