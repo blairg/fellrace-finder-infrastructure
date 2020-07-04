@@ -6,7 +6,7 @@ python3 ./scripts/destroy_cluster_check.py
 
 delete_flag=$(cat cluster.properties)
 
-if [ $delete_flag =~ "1" ]; then
+if [ $delete_flag == "1" ]; then
     helm uninstall nginx
     terraform init -backend-config="access_key=${DO_ACCESS_KEY}" -backend-config="secret_key=${DO_SECRET_KEY}"
     terraform destroy -var "do_token=${DO_TOKEN}" -auto-approve
