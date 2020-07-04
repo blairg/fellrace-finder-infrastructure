@@ -2,6 +2,6 @@
 set -e
 
 sudo snap install doctl
-doctl auth init -t $DO_TOKEN
+sudo doctl auth init -t $DO_TOKEN
 sudo snap connect doctl:kube-config
-doctl kubernetes cluster kubeconfig save bgtest-cluster
+sudo doctl kubernetes cluster kubeconfig save bgtest-cluster
