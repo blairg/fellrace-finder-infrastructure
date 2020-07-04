@@ -30,7 +30,7 @@ jobs:
     - name: Create Cluster
       run: | 
           sudo mkdir -p /home/runner/.kube
-          export KUBECONFIG="/home/runner/fellrace-finder-infrastructure/cluster_config"
+          export KUBECONFIG="/home/runner/work/fellrace-finder-infrastructure/cluster_config"
           make
       env: 
         DO_TOKEN: ${{ secrets.DO_TOKEN }}
