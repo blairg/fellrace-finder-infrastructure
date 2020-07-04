@@ -24,7 +24,10 @@ jobs:
       
     # Delete Kubernetes Cluster
     - name: Delete Cluster
-      run: make get_kube_config destroy_cluster
+      run: | 
+        sudo mkdir -p /home/runner/.kube
+        export KUBECONFIG="/home/runner/work/fellrace-finder-infrastructure/cluster_config"
+        make get_kube_config destroy_cluster
       env: 
         DO_TOKEN: ${{ secrets.DO_TOKEN }}
         DO_ACCESS_KEY: ${{ secrets.DO_ACCESS_KEY }}
