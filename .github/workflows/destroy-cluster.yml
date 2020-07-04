@@ -24,7 +24,7 @@ jobs:
       
     # Delete Kubernetes Cluster
     - name: Delete Cluster
-      run: make destroy_cluster
+      run: make get_kube_config destroy_cluster
       env: 
         DO_TOKEN: ${{ secrets.DO_TOKEN }}
         DO_ACCESS_KEY: ${{ secrets.DO_ACCESS_KEY }}
