@@ -28,7 +28,9 @@ jobs:
       
     # Create Kubernetes Cluster
     - name: Create Cluster
-      run: make
+      run: | 
+          sudo mkdir -p /home/runner/.kube
+          make
       env: 
         DO_TOKEN: ${{ secrets.DO_TOKEN }}
         DO_ACCESS_KEY: ${{ secrets.DO_ACCESS_KEY }}
