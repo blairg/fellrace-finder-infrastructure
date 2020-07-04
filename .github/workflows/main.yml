@@ -30,7 +30,7 @@ jobs:
     - name: Create Cluster
       run: | 
           sudo mkdir -p /home/runner/.kube
-          touch /home/runner/.kube/config
+          sudo touch /home/runner/.kube/config
           sudo chmod -R 777 /home/runner/.kube
           export KUBECONFIG="/home/runner/.kube/config"
           make
