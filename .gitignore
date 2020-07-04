@@ -11,3 +11,4 @@ variables.tfvars
 cluster_config
 .env
 get_helm.sh
+cluster.properties
