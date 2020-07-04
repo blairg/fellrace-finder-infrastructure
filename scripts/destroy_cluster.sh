@@ -13,6 +13,7 @@ then
     terraform destroy -var "do_token=${DO_TOKEN}" -auto-approve
     python3 ./scripts/post_cluster_destruction.py
 else
-    echo "Cluster not marked for deletion"
+    echo "Cluster not marked for deletion" 1>&2
+    exit 64
 fi
 
