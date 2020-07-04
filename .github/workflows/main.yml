@@ -44,8 +44,12 @@ jobs:
     # Install NGINX
     - name: Install NGINX Ingress
       run: make get_kube_config install_nginx_ingress
+      env: 
+        DO_TOKEN: ${{ secrets.DO_TOKEN }}
     
     # Install Prometheus
     - name: Install Prometheus
       run: make get_kube_config install_prometheus
+      env: 
+        DO_TOKEN: ${{ secrets.DO_TOKEN }}
   
